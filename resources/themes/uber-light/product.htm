@@ -124,10 +124,15 @@
                             }
 
                         ?>
-
+                        <!--
                         <li class="<?php echo $class; ?>">
                             <a href="<?php echo empty($item['href']) ? '#' : $item['href']; ?>"><?php echo $item['text']; ?></a>
                         </li>
+                        -->
+                        <li class="<?php echo $class; ?>">
+                            <a href="<?php echo empty($item['href']) ? '#' : $item['href']; echo '&cat=' . $gallery->_id . '&' . 'size=' . $gallery->_size ;?>"><?php echo $item['text']; ?></a>
+                        </li>
+
 
                     <?php endforeach; ?>
                 </ul>

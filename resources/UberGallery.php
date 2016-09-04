@@ -101,9 +101,11 @@ public function id2cat($id) {
 
 
         if (isset($_GET['cat'])) {
-            $this->_cat =  $this->id2cat((integer) $_GET['cat']);
+            $this->_id =  (integer) $_GET['cat'];
+            $this->_cat =  $this->id2cat($this->_id);
         } else {
             $this->_cat = '';
+            $this->_id =  -1;
         }
 
         if (isset($_GET['size'])) {

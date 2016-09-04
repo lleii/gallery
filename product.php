@@ -6,6 +6,21 @@
 //可选
 //1.同一商品多个图片自动识别;6.图片闽清等logo去除；
 
+/*
+1.性能；
+2.-1后筛选有问题
+3.筛选后，选页码有问题、id、size为空时优化
+4.git cache目录
+5.single页保留测边栏
+6.wechat图标等弹出二维码http://overtrue.me/share.js/
+7.nav增加电话和email
+8.nav增加message和blog？
+9.手机版本web、手机app、微信营销帐号
+
+
+*/
+
+
     // Include the UberGallery class
     include('resources/UberGallery.php');
 
