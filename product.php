@@ -1,7 +1,10 @@
 <?php
-//4.缩略图分辨率；5.html模版
+//4.缩略图分辨率，ini，图片cache／index和性能；5.html模版；
 
-//2.ini可写visit；3.性能优化;1.同一商品多个图片自动识别;6.图片闽清等logo去除；
+//2.ini可写visit；3.性能优化;
+
+//可选
+//1.同一商品多个图片自动识别;6.图片闽清等logo去除；
 
     // Include the UberGallery class
     include('resources/UberGallery.php');
