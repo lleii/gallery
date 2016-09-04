@@ -1,14 +1,17 @@
-<?php include 'header.htm' ?>
 
 <div class="product">
     <div class="container">                
-        <div class="col-md-4 single-top"> 
+        <div class="col-md-9 single-top"> 
+            <div class="thumbnail"> 
                 <img src="<?php echo $imgPath; ?>" data-imagezoom="true" class="img-responsive" alt=""/>
+                <div class="caption">
+                    <h3 style="text-align: center"><?php echo $_GET['n']; ?></h3>
+                </div>
+            </div>
         </div> 
 
 
-        <div class="col-md-8 ">
-                         <h4>Lighting Wood Carved Mop Glass Double Wall Lamp </h4>                          
+        <div class="col-md-9 col-md-offset-3">
                            <!-- <h5 class="item_price">$ 500.00</h5> -->
                            <br><br><br>
                             <pre>Catolog: <?php print_r($ini['Catolog']); ?> </pre>
@@ -28,4 +31,3 @@
      </div>
 </div>
 <!---->
-<?php include 'footer.htm' ?>

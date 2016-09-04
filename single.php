@@ -28,7 +28,11 @@ $ini = parse_ini_file($iniPath, true);
 //print_r($config['Catolog']);
 $navId='pro';
 
+include 'resources/themes/uber-light/header.htm';
+include 'resources/themes/uber-light/sidebar.htm';
 include 'resources/themes/uber-light/single.htm';
+include 'resources/themes/uber-light/footer.htm';
+
 
 
 

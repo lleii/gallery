@@ -760,6 +760,9 @@ public function id2cat($id) {
 
         // Calculate ratios
         $srcRatio   = $width / $height;
+        
+        $thumbHeight = $thumbWidth / $srcRatio;
+
         $thumbRatio = $thumbWidth / $thumbHeight;
 
         if ($srcRatio > $thumbRatio) {
