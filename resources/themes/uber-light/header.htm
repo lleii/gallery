@@ -46,6 +46,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 
+
+
 </head>
 <body> 
 <!--header-->
@@ -110,7 +112,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <ul class="nav navbar-nav navbar-right">
             
 
-        <li><a href="#"><i class="fa fa-1x fa-wechat"></i></a></li>
+
+ 
+
+        <!--<li><a href="#"><i class="fa fa-1x fa-wechat"></i></a></li>-->
         <li><a href="#"><i class="fa fa-1x fa-twitter"></i></a></li>
         <li><a href="#"><i class="fa fa-1x fa-facebook"></i></a></li>
         <li><a href="#"><i class="fa fa-1x fa-google"></i></a></li>
@@ -118,6 +123,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <li><a href="#"><i class="fa fa-1x fa-weibo"></i></a></li>
         <li><a href="#"><i class="fa fa-1x fa-whatsapp"></i></a></li>
         <li><a href="#"><i class="fa fa-1x fa-skype"></i></a></li>
+
+
+        <script type="text/javascript">
+            function  showImg(){
+            document.getElementById("wxImg").style.display='block';
+            }
+            function hideImg(){
+            document.getElementById("wxImg").style.display='none';
+            }
+        </script>
+
+        <div id="wxImg" style="display:none; right: 0px; top: 50px;back-ground:#f00;position:absolute; z-index:999;">
+          <img class="wx img-responsive img-thumbnail" src="http://www.czqiushi.com/wp-content/uploads/2015/10/weixin.jpg">
+        </div>
+
+        <li>
+          <a href="javascript:void(0)" onMouseOut="hideImg()"  onmouseover="showImg()">
+            <i class="fa fa-1x fa-wechat"></i>
+          </a>
+        </li>
 
 
 

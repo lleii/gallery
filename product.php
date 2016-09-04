@@ -3,18 +3,17 @@
 
 
 /*
-5.web内容裁剪修改
-6.wechat图标等弹出二维码http://overtrue.me/share.js/
-7.nav增加电话和email
-8.nav增加message和blog？
-9.手机版本web、手机app、微信公众号
 
-10.ini可写visit；
+7.nav增加电话和email
+8.message原理和发送，php邮件问题
+9.web内容裁剪修改
+10.图片点击量；ini可写visit；
 
 
 //可选
 1.性能；cache_expiration＝-1后筛选有问题
 2.同一商品多个图片自动识别;
+3.手机版本web、手机app、微信公众号
 
 
 */
