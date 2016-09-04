@@ -5,9 +5,11 @@
 /*
 
 7.nav增加电话和email
+11.b目录demo页面评估加入，如404
 8.message原理和发送，php邮件问题
 9.web内容裁剪修改
-10.图片点击量；ini可写visit；
+
+10.图片点击量；ini可写visit；php 访问量统计
 
 
 //可选
