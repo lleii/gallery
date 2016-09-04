@@ -9,7 +9,6 @@
 /*
 1.性能；
 2.-1后筛选有问题
-3.筛选后，选页码有问题、id、size为空时优化
 4.git cache目录
 5.single页保留测边栏
 6.wechat图标等弹出二维码http://overtrue.me/share.js/
