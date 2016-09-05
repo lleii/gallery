@@ -4,13 +4,12 @@
 
 /*
 
-7.nav增加电话和email
-11.b目录demo页面评估加入，如404
 8.message原理和发送，php邮件问题
 9.web内容裁剪修改
 
+11.b目录demo页面评估加入，如404
 10.图片点击量；ini可写visit；php 访问量统计
-
+11.百度地图白名单设置
 
 //可选
 1.性能；cache_expiration＝-1后筛选有问题
