@@ -1,0 +1,123 @@
+<div class="container-fluid">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Lists
+                    <small>管理工具</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+
+
+
+        <?php if (!empty($galleryArray) && $galleryArray['stats']['total_images'] > 0): ?>
+
+ <div class="row">             
+    <div class="col-md-2">
+        Image
+    </div>
+    <div class="col-md-1">
+        No.
+    </div>
+    <div class="col-md-1">
+        Catolog
+    </div>
+    <div class="col-md-1">
+        Size
+    </div>
+    <div class="col-md-1">
+        Release
+    </div>
+    <div class="col-md-6">
+        Info
+    </div>
+</div>
+<hr>
+
+
+
+
+                <?php foreach ($galleryArray['images'] as $image): ?>
+
+<?php $ini = parse_ini_file('gallery/' . $image['file_title'] . '.ini', true);?>
+
+<div class="row">             
+    <div class="col-md-2">
+        <a href="<?php echo html_entity_decode($image['file_path']); ?>" title="<?php echo $image['file_title']; ?>" class="thumbnail" rel="colorbox">
+            <img src="<?php echo $image['thumb_path']; ?>" class="img-rounded"  alt="<?php echo $image['file_title']; ?>" />
+        </a>
+    </div>
+    <div class="col-md-1">
+        <?php print_r($image['file_title']); ?>
+    </div>
+    <div class="col-md-1">
+        <?php print_r($ini['Catolog']); ?> 
+    </div>
+    <div class="col-md-1">
+        <?php print_r($ini['Size']); ?> 
+    </div>
+    <div class="col-md-1">
+        <?php print_r($ini['Release']); ?> 
+    </div>
+    <div class="col-md-6">
+        <pre><?php print_r($ini['Info']); ?></pre>
+    </div>
+</div>
+                <?php endforeach; ?>
+
+        <?php endif; ?>
+
+
+
+
+        <?php if ($galleryArray['stats']['total_pages'] > 1): ?>
+
+          <nav style="text-align: center">
+                <ul class="pagination pagination-centered">
+                    <?php foreach ($galleryArray['paginator'] as $item): ?>
+
+                        <?php
+
+                            switch ($item['class']) {
+
+                                case 'title':
+                                    $class = 'disabled';
+                                    break;
+
+                                case 'inactive':
+                                    $class = 'disabled';
+                                    break;
+
+                                case 'current':
+                                    $class = 'active';
+                                    break;
+
+                                case 'active':
+                                    $class = NULL;
+                                    break;
+
+                            }
+
+                        ?>
+                        <!--
+                        <li class="<?php echo $class; ?>">
+                            <a href="<?php echo empty($item['href']) ? '#' : $item['href']; ?>"><?php echo $item['text']; ?></a>
+                        </li>
+                        -->
+                        <li class="<?php echo $class; ?>">
+                            <a href="<?php echo empty($item['href']) ? '#' : $item['href']; echo '&cat=' . $gallery->_id . '&' . 'size=' . $gallery->_size ;?>"><?php echo $item['text']; ?></a>
+                        </li>
+
+
+                    <?php endforeach; ?>
+                </ul>
+            </nav>
+
+        <?php endif; ?>
+</div>
+<!---->
+

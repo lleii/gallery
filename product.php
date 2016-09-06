@@ -13,7 +13,6 @@
 
 
 
-管理工具php 
 导航页尾样式优化；
 
 
@@ -35,6 +34,7 @@ https://startbootstrap.com/template-overviews/small-business/
 1.性能；cache_expiration＝-1后筛选有问题
 2.同一商品多个图片自动识别;
 3.手机app、微信公众号
+
 
 
 */
