@@ -4,26 +4,19 @@
 
 /*
 
-
+musql：？
 10.pop:图片点击量；ini可写visit；区分cookie、session!php 访问量统计；.index原理；_isFileCached
     －1问题：1.新增文件能否刷新？如果不行，是否定时刷新？；2.分类筛选;
-11.new
+11.new；Release自动计算？服务器时区？
 
 2.服务器about截断问题；filezilla传输不完整，完整重传；
 
-
-
-导航页尾样式优化；
 
 
 网站icon，header头，seo！
 
 多余css／图片／js清理;版本整理
 
-start模板！
-https://blackrockdigital.github.io/startbootstrap-4-col-portfolio/
-https://blackrockdigital.github.io/startbootstrap-simple-sidebar/
-https://startbootstrap.com/template-overviews/small-business/
 
 
 //确定方案后完成部署，再具体调整
@@ -34,6 +27,9 @@ https://startbootstrap.com/template-overviews/small-business/
 1.性能；cache_expiration＝-1后筛选有问题
 2.同一商品多个图片自动识别;
 3.手机app、微信公众号
+4.SIDEBAR隐藏：https://blackrockdigital.github.io/startbootstrap-simple-sidebar/
+5.LOGO:https://startbootstrap.com/template-overviews/small-business/
+
 
 
 
