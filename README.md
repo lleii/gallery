@@ -1,8 +1,6 @@
 # gallery
 
 
-txt模板去掉visit；
-13.基线留存：light、uber
 14.安全检测；
 15.兼容性检测；
 
