@@ -77,6 +77,12 @@ public function id2cat($id) {
         case 4:
             return  'Border Tile& Decor Piece';
         break;
+        case 100:
+            return  'pop';
+        break;
+        case 101:
+            return  'new';
+        break;
     }
 
     return '';  
@@ -113,19 +119,6 @@ public function id2cat($id) {
         } else {
             $this->_size = '';
         }
-
-        if (isset($_GET['pop'])) {
-            $this->_pop =  $_GET['pop'];
-        } else {
-            $this->_pop = '';
-        }
-
-        if (isset($_GET['new'])) {
-            $this->_new =  $_GET['new'];
-        } else {
-            $this->_new = '';
-        }
-
 
         // Set class directory constant
         if(!defined('__DIR__')) {
@@ -303,6 +296,7 @@ public function id2cat($id) {
         }
 
         // Return the array
+        //print_r($galleryArray);
         return $galleryArray;
     }
 
@@ -1174,12 +1168,51 @@ public function id2cat($id) {
     private function _arrayCat($array) {
 
 
+            if ('pop' == $this->_cat){
+                $visit = parse_ini_file("resources/db/visit.txt");
+                $a = parse_ini_file("resources/db/visit.txt");
+
+
+                $j=0;
+                foreach($a as $x=>$x_value)
+                    {
+                        $j++;
+                        if ($j>60) break;
+                        //echo "Key=" . $x . ", Value=" . $x_value;
+                        echo "\n";
+                        //print_r($dir);
+                        if (file_exists( 'gallery/' . $x . '.jpg')) 
+                            { $imgPath = 'gallery/' . $x . '.jpg';
+                              $key = $x . '.jpg';  
+                            }
+                        else if (file_exists('gallery/' . $x . '.png')) 
+                            { $imgPath = 'gallery/' . $x . '.png';
+                              $key = $x . '.png';  
+                            }
+                        else if (file_exists('gallery/' . $x . '.gif')) 
+                            { $imgPath = 'gallery/' . $x . '.gif';
+                              $key = $x . '.gif';  
+                            }
+                        else 
+                            {die('ERROR: Failed to initialize imgPath');}
+                        $catArray[$key] = $array[$key];
+                        
+
+                    }
+                //print_r($catArray);
+                return $catArray;
+            }
+            
+            
+
+
             foreach ($array as $key => $image) {
 
                 $title   = str_replace('_', ' ', pathinfo($image['real_path'], PATHINFO_FILENAME));
                 $iniPath = pathinfo($image['real_path'], PATHINFO_DIRNAME).'/'.$title.'.txt';
 
                 //print_r(' :'.$iniPath.' ');
+                //print_r($array);
                 if (file_exists($iniPath))  {
                     $ini = parse_ini_file($iniPath, true);
                     if (
