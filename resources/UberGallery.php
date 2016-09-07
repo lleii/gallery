@@ -1189,33 +1189,6 @@ public function id2cat($id) {
                        $catArray[$key] = $array[$key];
                     }
                 }
-                //print_r($image);
-                //print_r('xxxxxxx');
-
-                //print_r($catArray);
-
-
-
-/*
-                if(!defined('__DIR__')) {
-            define('__DIR__', dirname(__FILE__));
-        }
-$dir = __DIR__;
-$configPath = $dir . '/' . $_GET['n'] . '.ini';
-
-//$_config     = array();
-
-$config = parse_ini_file($configPath, true);
-
-
-print_r($_GET['n']);
-//print_r($config['Catolog']);
-include'a.php';*/
-
-                // Add image to array if within current page
-               // if ($x > $firstElement && $x <= $lastElement) {
-                 //   $paginatedArray[$key] = $array[$key];
-                //}
 
 
             }
