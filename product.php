@@ -11,7 +11,7 @@ musql：？
 
 2.服务器about截断问题；filezilla传输不完整，完整重传；
 
-
+xxxxx.ini后缀改为txt
 
 网站icon，header头，seo！
 

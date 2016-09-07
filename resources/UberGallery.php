@@ -1177,7 +1177,7 @@ public function id2cat($id) {
             foreach ($array as $key => $image) {
 
                 $title   = str_replace('_', ' ', pathinfo($image['real_path'], PATHINFO_FILENAME));
-                $iniPath = pathinfo($image['real_path'], PATHINFO_DIRNAME).'/'.$title.'.ini';
+                $iniPath = pathinfo($image['real_path'], PATHINFO_DIRNAME).'/'.$title.'.txt';
 
                 //print_r(' :'.$iniPath.' ');
                 if (file_exists($iniPath))  {
