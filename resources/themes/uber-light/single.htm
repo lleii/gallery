@@ -14,8 +14,19 @@
 
 Catolog: <?php print_r($ini['Catolog']); ?> 
 Size: <?php print_r($ini['Size']); ?> 
-Release: <?php print_r($ini['Release']); ?> </h4>
+Release: <?php 
+if(isset($ini['Release'])  && !empty($ini['Release'])){
+    $d = $ini['Release'];     
+} else{
+    $d = date("Y-m-d",filectime($imgPath)) ;
+}
+print_r($d); 
+?>
 
+Visited: <?php 
+$a = parse_ini_file("resources/db/visit.txt");
+print_r($a[$_GET['n']]); 
+?></h4>
 <?php print_r($ini['Info']); ?> </pre>
         </div> 
 

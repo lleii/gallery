@@ -19,6 +19,7 @@ else
 	{die('ERROR: Failed to initialize imgPath');}
 
 $ini = parse_ini_file($iniPath, true);
+date_default_timezone_set("Asia/Shanghai");
 //$_config     = array();
 
 define("LF","\r\n");

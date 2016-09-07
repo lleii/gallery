@@ -32,7 +32,10 @@
     <div class="col-md-1">
         Release
     </div>
-    <div class="col-md-6">
+    <div class="col-md-1">
+        Visited
+    </div>
+    <div class="col-md-5">
         Info
     </div>
 </div>
@@ -61,12 +64,26 @@
         <?php print_r($ini['Size']); ?> 
     </div>
     <div class="col-md-1">
-        <?php print_r($ini['Release']); ?> 
+        <?php 
+            if(isset($ini['Release'])  && !empty($ini['Release'])){
+                $d = $ini['Release'];     
+            } else{
+                $d = date("Y-m-d",filectime($image['real_path'])) ;
+            }
+            print_r($d); 
+        ?>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-1">
+        <?php 
+            $a = parse_ini_file("resources/db/visit.txt");
+            print_r($a[$image['file_title']]); 
+        ?>
+
+    </div>
+    <div class="col-md-5">
         <pre><?php print_r($ini['Info']); ?></pre>
     </div>
-</div>
+</div>  
                 <?php endforeach; ?>
 
         <?php endif; ?>

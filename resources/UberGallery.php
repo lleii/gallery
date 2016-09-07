@@ -278,6 +278,7 @@ public function id2cat($id) {
                 $galleryArray['images'][htmlentities(pathinfo($image['real_path'], PATHINFO_BASENAME))] = array(
                     'file_title'   => str_replace('_', ' ', pathinfo($image['real_path'], PATHINFO_FILENAME)),
                     'file_path'    => htmlentities($relativePath),
+                    'real_path'    => $image['real_path'],
                     'thumb_path'   => $this->_createThumbnail($image['real_path'])
                 );
 
@@ -1186,7 +1187,7 @@ public function id2cat($id) {
 
 
             if ('pop' == $this->_cat){
-                $visit = parse_ini_file("resources/db/visit.txt");
+                //$visit = parse_ini_file("resources/db/visit.txt");
                 $a = parse_ini_file("resources/db/visit.txt");
 
 
