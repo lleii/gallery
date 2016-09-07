@@ -1,7 +1,5 @@
 Catolog = "3D Inkjet Tile" 
 Size = "300x450mm"
-Release = 2010-05-28
-Visit = 0
 Info = "Ceramic floor tile
 1.Size: 200x200,300x300,400x400mm(some patterns will also be produced by above different sizes.) 
 2.Water absorption: about 6% or 15%

@@ -25,7 +25,7 @@
     // Set path to theme index
     $themeIndex = $gallery->getThemePath(true) . '/product.htm';
 
-    /* Initialize the theme 
+    /* Initialize the theme */
     if (file_exists($themeIndex)) {
         include 'resources/themes/uber-light/header.htm';
         include 'resources/themes/uber-light/sidebar.htm';
@@ -34,4 +34,3 @@
     } else {
         die('ERROR: Failed to initialize theme');
     }
-*/

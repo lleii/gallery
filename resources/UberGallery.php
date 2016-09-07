@@ -687,8 +687,8 @@ public function id2cat($id) {
 
         $dirArray = $this->_arrayCat($dirArray);
 
-
-        $dirArray = $this->_arraySort($dirArray, $this->_config['sort_method'], $this->_config['reverse_sort']);
+        if ($this->_cat <> 'new' && $this->_cat <> 'pop')
+            $dirArray = $this->_arraySort($dirArray, $this->_config['sort_method'], $this->_config['reverse_sort']);
 
 
         // Paginate the array and return current page if enabled
@@ -1168,6 +1168,20 @@ public function id2cat($id) {
 
     }
 
+    private function _day_minus($Date_1,$Date_2) {
+        $Date_List_a1=explode("-",$Date_1);
+
+        $Date_List_a2=explode("-",$Date_2);
+
+        $d1=mktime(0,0,0,$Date_List_a1[1],$Date_List_a1[2],$Date_List_a1[0]);
+
+        $d2=mktime(0,0,0,$Date_List_a2[1],$Date_List_a2[2],$Date_List_a2[0]);
+
+        $Days=round(($d1-$d2)/3600/24);
+
+        return $Days;
+    }
+
     private function _arrayCat($array) {
 
 
@@ -1207,6 +1221,7 @@ public function id2cat($id) {
             }
 
             date_default_timezone_set("Asia/Shanghai");
+            $k=0;
 
             foreach ($array as $key => $image) {
 
@@ -1223,21 +1238,39 @@ public function id2cat($id) {
                         ){
                        $catArray[$key] = $array[$key];
                     }
-                    if ('' == $this->_cat){
+                    if ('new' == $this->_cat){
                         if(isset($ini['Release'])  && !empty($ini['Release'])){
-                            $dateArray[$key] = $ini['Release'];     
+                            $d = $ini['Release'];     
                         } else{
-                            $dateArray[$key] = date("Y-m-d",filectime($image['real_path'])) ;
+                            $d = date("Y-m-d",filectime($image['real_path'])) ;
                         }
-                       
+                        if ($this->_day_minus(date("Y-m-d"),$d) <90) {
+                            $catArray[$key] = $array[$key];
+                            $k++;
+                            //print_r($this->_day_minus(date("Y-m-d"),$dateArray[$key]) . "\n");
+
+                        } else {
+                            $dateArray[$key] = $d;
+                        }                       
                     }
                 }
 
 
             }
-            arsort($dateArray);
-            print_r($dateArray);
-
+            
+            //print_r("xxxx:" . $k);
+            if ('new' == $this->_cat) {
+                if (isset($dateArray)) arsort($dateArray);
+                foreach ($dateArray as $key => $date) {
+                    if ($k>=60) break;
+                    //print_r("y:" . $dateArray[$key]);
+                    $catArray[$key] = $array[$key];
+                    $k++;
+                    //print_r($dateArray[$key] . ": " . $this->_day_minus(date("Y-m-d"),$dateArray[$key]) . "\n");
+                }
+            }
+            //print_r($dateArray);
+            //print_r($catArray);
             return $catArray;
 
     }
