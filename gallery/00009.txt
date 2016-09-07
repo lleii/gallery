@@ -1,6 +1,6 @@
 Catolog = "3D Inkjet Tile" 
 Size = "300x600mm"
-Release = 2010-05-28
+Release = 2010-09-28
 Visit = 0
 Info = "Ceramic floor tile
 1.Size: 200x200,300x300,400x400mm(some patterns will also be produced by above different sizes.) 

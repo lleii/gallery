@@ -681,11 +681,14 @@ public function id2cat($id) {
         }
 
         // Sort the array
-        $dirArray = $this->_arraySort($dirArray, $this->_config['sort_method'], $this->_config['reverse_sort']);
+        
 //print_r('1111111111');
   //      print_r($dirArray);
 
         $dirArray = $this->_arrayCat($dirArray);
+
+
+        $dirArray = $this->_arraySort($dirArray, $this->_config['sort_method'], $this->_config['reverse_sort']);
 
 
         // Paginate the array and return current page if enabled
@@ -1202,9 +1205,8 @@ public function id2cat($id) {
                 //print_r($catArray);
                 return $catArray;
             }
-            
-            
 
+            date_default_timezone_set("Asia/Shanghai");
 
             foreach ($array as $key => $image) {
 
@@ -1221,10 +1223,20 @@ public function id2cat($id) {
                         ){
                        $catArray[$key] = $array[$key];
                     }
+                    if ('' == $this->_cat){
+                        if(isset($ini['Release'])  && !empty($ini['Release'])){
+                            $dateArray[$key] = $ini['Release'];     
+                        } else{
+                            $dateArray[$key] = date("Y-m-d",filectime($image['real_path'])) ;
+                        }
+                       
+                    }
                 }
 
 
             }
+            arsort($dateArray);
+            print_r($dateArray);
 
             return $catArray;
 
