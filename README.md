@@ -4,13 +4,14 @@
 14.安全检测；后门检测；注入检测
 15.兼容性检测；
 
+16.多余代码删除，源代码等
 
 
-网站icon，header头，seo！
 
-gae/rhc/free_php_hosts、分布式DNS
+
 
 2.服务器about截断问题；filezilla传输不完整，完整重传；
+sftp区别
 LeapFtp
 flashfxp 
 winscp
@@ -24,6 +25,9 @@ FTPrush
 11.百度地图白名单设置
 10.真实msg页面邮箱
 13.服务器时区？
+14.seo！header头
+15.网站favicon
+
 
 
 //可选
@@ -35,6 +39,7 @@ FTPrush
 4.SIDEBAR隐藏：https://blackrockdigital.github.io/startbootstrap-simple-sidebar/
 5.LOGO:https://startbootstrap.com/template-overviews/small-business/
 6.resources/db/visit.txt 等文件禁止http访问
+7.gae/rhc/free_php_hosts、分布式DNS
 
 
 
