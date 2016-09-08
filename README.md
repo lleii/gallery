@@ -27,7 +27,7 @@ FTPrush
 13.服务器时区？
 14.seo！header头
 15.网站favicon
-
+16.t.php删除
 
 
 //可选
