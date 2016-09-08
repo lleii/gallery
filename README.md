@@ -4,10 +4,17 @@
 14.安全检测；后门检测；注入检测
 15.兼容性检测；
 
-2.服务器about截断问题；filezilla传输不完整，完整重传；
 
 
 网站icon，header头，seo！
+
+gae/rhc/free_php_hosts、分布式DNS
+
+2.服务器about截断问题；filezilla传输不完整，完整重传；
+LeapFtp
+flashfxp 
+winscp
+FTPrush
 
 
 
