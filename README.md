@@ -7,11 +7,7 @@
 16.多余代码删除，源代码等
 17.bootstrap bs.theme，jqurey其他功能引入；
 
-18.bd地图控件，响应式
 19.工程结构调整
-12.手机版本／平板版本，bs 4种布局，响应式布局调整:产品信息sidebar等；
-winscp/filezilla 绿色配置
-http://jimmysu.logdown.com/posts/254007-do-not-use-bootstrap-like-this
 
 
 
