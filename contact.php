@@ -1,6 +1,6 @@
 <?php
 
-
+ini_set('display_errors', false);
 
 //print_r($imgPath);
 //print_r($config['Catolog']);

@@ -1,5 +1,7 @@
 <?php
 
+ini_set('display_errors', false);
+
     // Include the UberGallery class
     include('resources/UberGallery.php');
 

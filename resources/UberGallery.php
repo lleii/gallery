@@ -1,5 +1,7 @@
 <?php
 
+ini_set('display_errors', false);
+
 /**
  * UberGallery is an easy to use, simple to manage, web photo gallery written in
  * PHP. UberGallery does not require a database and supports JPEG, GIF and PNG

@@ -1,8 +1,7 @@
 # gallery
 
 
-14.安全检测；后门检测；注入检测
-15.兼容性检测；
+14.安全检测；360已完成；360页面删除
 
 
 
@@ -19,6 +18,8 @@
 5.LOGO:https://startbootstrap.com/template-overviews/small-business/
 6.resources/db/visit.txt 等文件禁止http访问
 7.gae/rhc/free_php_hosts、分布式DNS
+15.兼容性检测；validator.w3.org已完成
+
 
 
 
