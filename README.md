@@ -8,20 +8,14 @@
 17.bootstrap其他功能引入；
 
 18.bd地图控件，响应式
-
-
-2.服务器about截断问题；filezilla传输不完整，完整重传；
-sftp区别
-LeapFtp
-flashfxp 
-winscp
-FTPrush
+19.工程结构调整
+12.手机版本／平板版本，bs 4种布局，响应式布局调整:产品信息sidebar等；
+winscp/filezilla 绿色配置
 
 
 
 
 //确定方案后完成部署，再具体调整
-12.手机版本／平板版本，bs 4种布局，响应式布局调整:产品信息sidebar等；
 11.百度地图白名单设置
 10.真实msg页面邮箱
 13.服务器时区？
