@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>CnFzBm</title>
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
@@ -73,6 +73,13 @@
         <li><a href="#"><i class="fa fa-1x fa-whatsapp"></i></a></li>
         <li><a href="#"><i class="fa fa-1x fa-skype"></i></a></li>
 
+        <li>
+          <a href="javascript:void(0)" onMouseOut="hideImg()"  onmouseover="showImg()">
+            <i class="fa fa-1x fa-wechat"></i>
+          </a>
+        </li>
+      </ul>
+
 
         <script type="text/javascript">
             function  showImg(){
@@ -83,19 +90,9 @@
             }
         </script>
 
-        <div id="wxImg" style="display:none; right: 0px; top: 50px;back-ground:#f00;position:absolute; z-index:999;">
-          <img class="wx img-responsive img-thumbnail" src="images/weixin.jpg">
-        </div>
+        
+          <img id="wxImg" style="display:none; right: 0px; top: 50px;back-ground:#f00;position:absolute; z-index:999;" class="wx img-responsive img-thumbnail" src="images/weixin.jpg" alt="wechat">
 
-        <li>
-          <a href="javascript:void(0)" onMouseOut="hideImg()"  onmouseover="showImg()">
-            <i class="fa fa-1x fa-wechat"></i>
-          </a>
-        </li>
-
-
-
-      </ul>
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
