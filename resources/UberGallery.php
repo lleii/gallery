@@ -1214,7 +1214,8 @@ public function id2cat($id) {
                               $key = $x . '.gif';  
                             }
                         else 
-                            {die('ERROR: Failed to initialize imgPath');}
+                            {continue;}
+
                         $catArray[$key] = $array[$key];
                         
 

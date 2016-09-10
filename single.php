@@ -16,7 +16,13 @@ else if (file_exists($dir . '/gallery/' . $_GET['n'] . '.png'))
 else if (file_exists($dir . '/gallery/' . $_GET['n'] . '.gif')) 
 	{ $imgPath = 'gallery/' . $_GET['n'] . '.gif';}
 else 
-	{die('ERROR: Failed to initialize imgPath');}
+	{
+    //die('ERROR: Failed to initialize imgPath');
+    //header('HTTP/1.1 404 Not Found');
+    //header("status: 404 Not Found");
+    include '404.php';
+    exit;
+  }
 
 $ini = parse_ini_file($iniPath, true);
 date_default_timezone_set("Asia/Shanghai");
