@@ -1,2 +1,9 @@
-ErrorDocument 404 /404.php  
+<FilesMatch "(\.(txt|ini|gitignore|htaccess|htpasswd|md|htm)|LICENSE)$">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+ErrorDocument 404 /404.php
+ErrorDocument 403 /404.php  
 Options All -Indexes
